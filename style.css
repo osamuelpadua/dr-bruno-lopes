@@ -1767,7 +1767,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .contact-logo {
-  width: min(420px, 100%);
+  width: min(300px, 100%);
   display: block;
 }
 
@@ -1825,7 +1825,7 @@ body::-webkit-scrollbar-thumb:hover {
   }
 
   .contact-logo {
-    width: min(360px, 100%);
+    width: min(260px, 100%);
   }
 
   .contact-map-wrap {
@@ -1934,7 +1934,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .site-footer-credit-logo {
-  height: 13px;
+  height: 22px;
   width: auto;
   display: block;
 }
