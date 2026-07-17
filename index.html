@@ -624,6 +624,36 @@
   </section>
   <!-- ======================== /REVIEWS BLOCK ======================== -->
 
+  <!-- ======================== VIDEO REVIEW BLOCK ======================== -->
+  <section class="vreview-block">
+    <div class="vreview-inner">
+
+      <div class="vreview-media">
+        <button class="vreview-player" type="button" data-video-id="Dsuciam9in0" aria-label="Assistir ao depoimento em vídeo de Carmem">
+          <img src="depoimento-carmem.jpg" alt="Carmem, paciente do Dr. Bruno Lopes" loading="lazy" width="404" height="720">
+          <span class="vreview-play" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 5.5l11 6.5-11 6.5V5.5z" fill="white"/>
+            </svg>
+          </span>
+        </button>
+      </div>
+
+      <div class="vreview-text">
+        <span class="vreview-tagline">Depoimento em vídeo</span>
+        <h2 class="vreview-title">A história da <strong>Carmem</strong></h2>
+        <p class="vreview-desc">
+          Ouça da própria paciente como foi o tratamento e o que mudou na rotina dela depois de recuperar os movimentos sem dor.
+        </p>
+        <a href="https://wa.me/5527996363010" class="btn-cta" target="_blank" rel="noopener">
+          Agende uma Consulta
+        </a>
+      </div>
+
+    </div>
+  </section>
+  <!-- ======================== /VIDEO REVIEW BLOCK ======================== -->
+
   <!-- ======================== PROFILE BLOCK ======================== -->
   <section class="profile-block">
     <div class="profile-inner">
@@ -1053,6 +1083,8 @@
         { selector: '.reviews-carousel', effect: 'zoom', delay: 80 },
         { selector: '.reviews-pagination', effect: 'up', delay: 140 },
         { selector: '.reviews-footer', effect: 'up', delay: 180 },
+        { selector: '.vreview-media', effect: 'left' },
+        { selector: '.vreview-text', effect: 'right', delay: 80 },
         { selector: '.profile-media', effect: 'left' },
         { selector: '.profile-content', effect: 'right', delay: 70 },
         { selector: '.faq-header', effect: 'up' },
@@ -1141,6 +1173,22 @@
       var yearEl = document.getElementById('footer-year');
       if (!yearEl) return;
       yearEl.textContent = new Date().getFullYear();
+    })();
+
+    // Facade do depoimento em vídeo: o player do YouTube só é criado no clique,
+    // evitando ~1,5MB e cookies de terceiros em quem nunca assiste.
+    (function () {
+      var btn = document.querySelector('.vreview-player');
+      if (!btn) return;
+
+      btn.addEventListener('click', function () {
+        var frame = document.createElement('iframe');
+        frame.src = 'https://www.youtube-nocookie.com/embed/' + btn.getAttribute('data-video-id') + '?autoplay=1&rel=0';
+        frame.title = 'Depoimento em vídeo de Carmem';
+        frame.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+        frame.allowFullscreen = true;
+        btn.replaceWith(frame);
+      }, { once: true });
     })();
   </script>
 </body>
