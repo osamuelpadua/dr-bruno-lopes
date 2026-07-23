@@ -5,8 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fisioterapeuta em Vitória - ES | Tratamento da Coluna, Hérnia de Disco e Dor Ciática</title>
   <meta name="description" content="Fisioterapeuta em Vitória - ES com foco em tratamento da coluna, hérnia de disco e dor no nervo ciático. Atendimento individualizado para aliviar a dor e recuperar os movimentos.">
-  <meta name="robots" content="index,follow">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+  <meta name="author" content="Bruno Lopes">
   <link rel="canonical" href="https://doutorbrunolopes.com.br/">
+  <meta name="theme-color" content="#1E5250">
+  <!-- Geo tags: reforçam o sinal de busca local ("fisioterapeuta perto de mim") -->
+  <meta name="geo.region" content="BR-ES">
+  <meta name="geo.placename" content="Vitória">
+  <meta name="geo.position" content="-20.286400;-40.297500">
+  <meta name="ICBM" content="-20.286400, -40.297500">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Bruno Lopes">
@@ -15,6 +22,8 @@
   <meta property="og:description" content="Fisioterapeuta em Vitória - ES com foco em tratamento da coluna, hérnia de disco e dor no nervo ciático. Atendimento individualizado para aliviar a dor e recuperar os movimentos.">
   <meta property="og:image" content="https://doutorbrunolopes.com.br/share-img.jpg">
   <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Bruno Lopes, fisioterapeuta especialista em coluna em Vitória - ES">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Fisioterapeuta em Vitória - ES | Tratamento da Coluna, Hérnia de Disco e Dor Ciática">
@@ -39,13 +48,44 @@
           "image": "https://doutorbrunolopes.com.br/share-img.jpg",
           "telephone": "+55-27-99636-3010",
           "priceRange": "$$",
+          "description": "Clínica de fisioterapia em Vitória - ES especializada no tratamento da coluna, hérnia de disco, dor no nervo ciático e reabilitação pós-operatória.",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Rua Nahum Prado, 80 - Mata da Praia",
             "addressLocality": "Vitória",
             "addressRegion": "ES",
+            "postalCode": "29065-260",
             "addressCountry": "BR"
           },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -20.2864,
+            "longitude": -40.2975
+          },
+          "areaServed": [
+            { "@type": "City", "name": "Vitória" },
+            { "@type": "City", "name": "Vila Velha" },
+            { "@type": "City", "name": "Serra" },
+            { "@type": "City", "name": "Cariacica" }
+          ],
+          "medicalSpecialty": "Physiotherapy",
+          "availableService": [
+            {
+              "@type": "MedicalTherapy",
+              "name": "Tratamento de hérnia de disco",
+              "description": "Tratamento conservador da hérnia de disco cervical e lombar com terapia manual e exercícios ativos."
+            },
+            {
+              "@type": "MedicalTherapy",
+              "name": "Tratamento da dor no nervo ciático",
+              "description": "Alívio da compressão do nervo ciático, redução da inflamação e recuperação dos movimentos."
+            },
+            {
+              "@type": "MedicalTherapy",
+              "name": "Reabilitação pós-operatória",
+              "description": "Acompanhamento da recuperação funcional após cirurgias, com progressão segura de carga e movimento."
+            }
+          ],
           "sameAs": [
             "https://www.instagram.com/fisio.brunolopes/"
           ]
@@ -165,7 +205,8 @@
             <img src="stamp-txt.svg" class="stamp-txt" alt="">
             <img src="stamp-iso.svg" class="stamp-iso" alt="">
           </div>
-          <img src="drbruno.png" class="doctor-img" alt="Dr. Bruno Lopes">
+          <!-- Sem lazy: é o LCP da página, precisa carregar o quanto antes. -->
+          <img src="drbruno.png" class="doctor-img" width="1113" height="1251" fetchpriority="high" decoding="async" alt="Dr. Bruno Lopes, fisioterapeuta especialista em coluna em Vitória - ES">
         </div>
 
       </div>
@@ -255,7 +296,7 @@
 
     <div class="problems-inner">
       <div class="problems-img-col">
-        <img src="img1.png" class="problems-img" alt="Coluna vertebral com dor">
+        <img src="img1.png" class="problems-img" width="441" height="377" loading="lazy" decoding="async" alt="Ilustração da coluna vertebral com pontos de dor">
       </div>
 
       <h2 class="problems-headline">Alguns dos<br>problemas mais<br>comuns na coluna</h2>
@@ -292,7 +333,7 @@
     <div class="condition-inner">
 
       <div class="condition-media">
-        <img src="ciatico.jpg" class="condition-img" alt="Dor no Nervo Ciático">
+        <img src="ciatico.jpg" class="condition-img" width="705" height="557" loading="lazy" decoding="async" alt="Tratamento da dor no nervo ciático com fisioterapia">
       </div>
 
       <div class="condition-text">
@@ -677,7 +718,7 @@
   <section class="profile-block">
     <div class="profile-inner">
       <div class="profile-media">
-        <img src="profile.jpg" alt="Bruno Lopes" class="profile-image">
+        <img src="profile.jpg" class="profile-image" width="418" height="573" loading="lazy" decoding="async" alt="Bruno Lopes, fisioterapeuta CREFITO-15 112902-F, em seu consultório em Vitória - ES">
       </div>
 
       <div class="profile-content">
