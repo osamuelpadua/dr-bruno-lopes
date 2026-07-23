@@ -159,12 +159,6 @@
   box-shadow: 0 8px 32px rgba(30, 82, 80, 0.12);
 }
 
-/* Card sem destino definido — mantém a animação de entrada, mas não responde ao hover */
-.lk-card[aria-disabled="true"] {
-  cursor: default;
-  pointer-events: none;
-}
-
 /* Primary card (Agende) */
 .lk-card--primary {
   background: linear-gradient(135deg, #43B8B4, #2A8C88, #1E5250, #2A8C88, #43B8B4);
